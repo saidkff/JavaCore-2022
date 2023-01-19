@@ -19,7 +19,11 @@ public class WeaponRunner {
         printWeaponDamage(archer);
     }
 
-    public static void printWeaponDamage(Hero<Bow> hero){
+    public static <T extends Weapon> void printWeaponDamage(Hero<T> hero){
         System.out.println(hero.getWeapon().getDamage());
     }
+
+//    public static void printWeaponDamage(Hero<? extends Weapon> hero){
+//        System.out.println(hero.getWeapon().getDamage());
+//    }
 }
