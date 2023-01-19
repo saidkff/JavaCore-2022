@@ -1,9 +1,10 @@
 package OOP.Heroes;
 
+import Generics.Weapons.MagicWeapon;
 import OOP.Hero;
 import OOP.Heroes.Enemy;
 
-public class Mage extends Hero {
+public class Mage<T extends MagicWeapon> extends Hero<T> {
     public Mage(String firstName, int damage) {
         super(firstName, damage);
     }

@@ -1,8 +1,9 @@
 package OOP.Heroes;
 
+import Generics.Weapons.RangeWeapon;
 import OOP.Hero;
 
-public class Archer extends Hero {
+public class Archer<T extends RangeWeapon> extends Hero<T> {
 
     public Archer(String firstName, int damage) {
         super(firstName, damage);

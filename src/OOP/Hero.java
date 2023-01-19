@@ -2,10 +2,12 @@ package OOP;
 
 import OOP.Heroes.Enemy;
 
-public abstract class Hero {
+public abstract class Hero<T> {
     private String firstName;
 
     private int damage;
+
+    private T weapon;
 
     public Hero(String firstName, int damage) {
         this.firstName = firstName;
@@ -24,5 +26,13 @@ public abstract class Hero {
 
     public void setDamage(int damage) {
         this.damage = damage;
+    }
+
+    public T getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(T weapon) {
+        this.weapon = weapon;
     }
 }
