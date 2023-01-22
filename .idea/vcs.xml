@@ -4,8 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/com" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/src/com/Collections" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/src/com/OOP" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/com/company" vcs="Git" />
   </component>
 </project>
