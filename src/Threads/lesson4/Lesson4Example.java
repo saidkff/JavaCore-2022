@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Random;
 
 public class Lesson4Example {
-    private static List<Integer> list1 = new ArrayList<>();
-    private static List<Integer> list2 = new ArrayList<>();
-    private static Random random = new Random();
+    private static final List<Integer> list1 = new ArrayList<>();
+    private static final List<Integer> list2 = new ArrayList<>();
+    private static final Random random = new Random();
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
@@ -36,7 +36,7 @@ public class Lesson4Example {
         }
 
         long endTime = System.currentTimeMillis();
-        System.out.println("Time" + (endTime-startTime)*10);
+        System.out.println("Time: " + (endTime-startTime)*10);
         getSize();
     }
 
@@ -56,7 +56,7 @@ public class Lesson4Example {
     }
 
     public static void getSize(){
-        System.out.println("size of list1 is: " + list1.size());
-        System.out.println("size of list2 is: " + list2.size());
+        System.out.println("The size of the list1 is: " + list1.size());
+        System.out.println("size of the list2 is: " + list2.size());
     }
 }
