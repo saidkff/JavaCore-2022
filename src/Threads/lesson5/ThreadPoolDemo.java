@@ -12,6 +12,7 @@ public class ThreadPoolDemo {
         }
         service.shutdown();
 
+        service.awaitTermination(30, TimeUnit.SECONDS);
         System.out.println("All tasks submitted!");
     }
 }
