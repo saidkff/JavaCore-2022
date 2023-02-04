@@ -15,7 +15,7 @@ public class CountDownLatchDemo {
         }
         service.shutdown();
 
-        countDownLatch.await();                                                    // Прграмма дальше не идет, пока не вызовится команда shutdown 4 раза!
+        countDownLatch.await();                                                    // Прграмма дальше не идет, пока не вызовится команда countDown 4 раза!
 
         System.out.println("Letch have been opened, main thread is proceeding");
     }
