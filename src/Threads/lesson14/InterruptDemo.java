@@ -1,4 +1,4 @@
-package com.company;
+package Threads.lesson14;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Interrupt работает как монитор, вернет true если в потоке вызван метод Interrupt, либо же false если не вызван.
  * Он не останавливает поток, мы можем сами безопасно использовать эту функцию
  */
-public class Main {
+public class InterruptDemo {
     public static void main(String[] args) {
         Thread thread = new Thread(new MyRunnable(), "MyThread");
         thread.start();
