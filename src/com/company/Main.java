@@ -1,35 +1,38 @@
 package com.company;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.Optional;
 
-/**
- * Interrupt работает как монитор, вернет true если в потоке вызван метод Interrupt, либо же false если не вызван.
- * Он не останавливает поток, мы можем сами безопасно использовать эту функцию
- */
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        Thread thread = new Thread(new MyRunnable(), "MyThread");
-        thread.start();
+        Person person = new Person("Bob", null);
 
-        new Scanner(System.in).nextLine();
-        thread.interrupt();
+        String orElse = person.getLastName().orElse("Jameson");
+        System.out.println(orElse);
     }
 }
 
-class MyRunnable implements Runnable {
-    private Random random = new Random();
+class Person {
+    private String firstName;
+    private String lastName;
 
-    @Override
-    public void run() {
-        System.out.println(Thread.currentThread().getName() + " started!");
-        for (int i = 0; i < 1_000_000_000; i++) {
-            if (Thread.currentThread().isInterrupted()) {
-                System.out.println("Thread was interrupted! ");
-                break;
-            }
-            Math.cos(random.nextDouble(100));
-        }
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Optional<String> getLastName() {
+        return Optional.ofNullable(lastName);
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
-
