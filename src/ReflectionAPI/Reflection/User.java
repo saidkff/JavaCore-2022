@@ -1,4 +1,4 @@
-package ReflectionAPI;
+package ReflectionAPI.Reflection;
 
 public class User extends Person{
     private String name;

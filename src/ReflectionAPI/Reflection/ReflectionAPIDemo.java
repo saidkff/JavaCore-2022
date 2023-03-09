@@ -1,4 +1,4 @@
-package ReflectionAPI;
+package ReflectionAPI.Reflection;
 
 import java.lang.reflect.*;
 
