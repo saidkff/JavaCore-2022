@@ -3,7 +3,7 @@ package IOStreams.InputStreamPackage;
 import java.io.*;
 import java.nio.file.Path;
 
-public class IStreamDemo {
+public class FileInputStreamDemo {
     public static void main(String[] args) throws IOException {
         Path path = Path.of("src", "IOStreams", "RESOURCES", "FileToRead.txt");
         InputStream inputStream = new FileInputStream(path.toFile());
